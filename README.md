@@ -14,7 +14,7 @@ Dataset
   * CIFAR10 (torchvision)
   * CIFAR100 (torchvision)
   * STL10 (torchvision)
-  * ImageNet (torchvision)
+  * ImageNet (https://image-net.org/)
 
 
 Algorithm 
@@ -29,10 +29,10 @@ Algorithm
     where α is the smoothing coefficient, and the probabilities
     for each class except the hard target corresponding to the
     kth class are evenly distributed as α/(K − 1).
-    
-<img src="https://render.githubusercontent.com/render/math?math=y_{i}^{~k}=(1-\alpha)y_{i}^{k} + \frac{\alpha}{K-1}">
 
-    * kd
+    <img src="https://render.githubusercontent.com/render/math?math=y_{i}^{~k}=(1-\alpha)y_{i}^{k} + \frac{\alpha}{K-1}" width=1000 height=25>
+
+    * Knowledge distillation
     
 * Deterministic Label Enhancement
 
