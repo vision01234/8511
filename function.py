@@ -64,11 +64,10 @@ def train(model, device, train_loader, optimizer, epoch, opt):
     studentModel.train()
     if opt.is_smart_model:
         smartModel = smartModel.eval()
+
     losses = AverageMeter()
     Targetscores = AverageMeter()
 
-    softmax = nn.Softmax()
-    sigmoid = torch.nn.Sigmoid()    
     N_count = 0  
     for batch_idx, (images, y) in enumerate(train_loader):
         images, y = images.to(device), y.to(device)
@@ -130,12 +129,9 @@ def validation(model, device, optimizer, test_loader, opt):
     accs = AverageMeter()
     losses = AverageMeter()
 
-    softmax = nn.Softmax()
-    sigmoid = torch.nn.Sigmoid()
-
     with torch.no_grad():
         for images, y in test_loader:
-            # distribute data to device
+
             images, y = images.to(device), y.to(device)
            
             output_st = studentModel(images)
