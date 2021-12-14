@@ -29,7 +29,7 @@ Algorithm
  We simplified the problem by using the KD configuration by the teacher model as the enhanced label to extract feasible solutions for each sample pair (x<sub>i</sub>, z<sub>i</sub>
 ; θ).   
 The cross entropy loss for training with the enhanced label generated bythe teacher θ<sub>t</sub> and the student model to be trained is θ<sub>s</sub>   
-   <img src="https://render.githubusercontent.com/render/math?math=y_{i}^{~k}=(1-\alpha)y_{i}^{k} + \frac{\alpha}{K-1}" width=1000 height=1000>
+
 soft label (SL, #4), soft label with teacher ensemble (EN-SL, #5), KD with soft label from multiple teachers (KD-SL, #6)
 
 * Stochastic Label Enhancement (7, 8, 9)
