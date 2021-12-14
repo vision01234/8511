@@ -28,9 +28,7 @@ Algorithm
 
  We simplified the problem by using the KD configuration by the teacher model as the enhanced label to extract feasible solutions for each sample pair (x<sub>i</sub>, z<sub>i</sub>
 ; θ).   
-The cross entropy loss for training with the enhanced label generated bythe teacher θ<sub>t</sub> and the student model to be trained is θ<sub>s</sub>   
-
-soft label (SL, #4), soft label with teacher ensemble (EN-SL, #5), KD with soft label from multiple teachers (KD-SL, #6)
+The cross entropy loss for training with the enhanced label generated bythe teacher θ<sub>t</sub> and the student model to be trained is θ<sub>s</sub> soft label (SL, #4), soft label with teacher ensemble (EN-SL, #5), KD with soft label from multiple teachers (KD-SL, #6)
 
 * Stochastic Label Enhancement (7, 8, 9)
 
@@ -55,7 +53,7 @@ Scheduler
 ---------
 default schedulering (CIFAR10, 100, STL10)
 * Learning rate : 0.05
-* Decay : 5e-4
+* Weight decay : 5e-4
 * Batch size : 64
 * Epoch : 240
 * learning rate scaling : 150, 180, and 210 epochs
@@ -66,7 +64,7 @@ Long training (CIFAR10, 100, STL10)
 
 default schedulering (ImageNet)
 * Learning rate : 0.1
-* Decay : 1e-4
+* Weight decay : 1e-4
 * Batch size : 256
 * Epoch : 100
 * learning rate scaling : 30, 60, and 90 epochs
